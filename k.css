@@ -1,0 +1,151 @@
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes slideColorShift {
+  0%   { background: rgba(247, 54, 37, 0.3); }
+  25%  { background: rgba(46, 214, 244, 0.3); }
+  50%  { background: rgba(151, 170, 242, 0.3); }
+  75%  { background: rgba(243, 165, 130, 0.74); }
+  100% { background: rgba(244, 50, 115, 0.3); }
+}
+
+body {
+  margin: 0;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  color: #333;
+  background: linear-gradient(-45deg, #f8f8aa, #f8f8aa, #f8f8aa, #f8f8aa);
+  background-size: 400% 400%;
+  animation: gradientShift 8s ease infinite;
+}
+
+.testimonials {
+  padding: 50px 20px;
+  text-align: center;
+  max-width: 1000px;
+  margin: auto;
+  position: relative;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #130000;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.top-controls {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+#addBtn,
+#addFileBtn {
+  font-size: 1.2rem;
+  padding: 8px 16px;
+  margin-left: 8px;
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#addBtn:hover,
+#addFileBtn:hover {
+  background: linear-gradient(to right, #f12711, #f5af19);
+}
+
+.slider-wrapper {
+  position: relative;
+  overflow: hidden;
+  outline: none;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 30px;
+  color: white;
+  border-radius: 10px;
+  margin: 0 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  animation: slideColorShift 4s linear infinite;
+}
+
+.slide img {
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.slide blockquote {
+  font-style: italic;
+  margin-bottom: 20px;
+  color: #0b0000;
+}
+
+.slide h3 {
+  margin: 5px 0;
+  font-size: 1.2em;
+}
+
+.slide span {
+  font-size: 0.9em;
+  color: #070000;
+}
+
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: linear-gradient(to right, #43cea2, #acd0f4);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.nav:hover,
+.nav:focus {
+  background: linear-gradient(to right, #30cfd0, #330867);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+@media (max-width: 768px) {
+  .slide {
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  #addBtn,
+  #addFileBtn {
+    font-size: 1rem;
+    padding: 6px 10px;
+  }
+}

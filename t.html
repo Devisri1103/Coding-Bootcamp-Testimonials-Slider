@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Coding Bootcamp Testimonials</title>
+  <link rel="stylesheet" href="k.css" />
+</head>
+<body>
+  <main class="testimonials">
+    <h1 class="title">Coding Bootcamp Testimonials</h1>
+
+    <div class="top-controls">
+      <button id="addBtn">+</button>
+      <button id="addFileBtn" style="display: none;">Add Slide</button>
+      <input type="file" id="fileInput" accept="image/*" style="display: none;" />
+    </div>
+
+    <div class="slider-wrapper" aria-label="Testimonials Slider">
+      <div class="slider" id="slider" tabindex="0">
+        <div class="slide">
+          <img src="https://t3.ftcdn.net/jpg/05/82/16/78/360_F_582167861_fI1K0aGgWVnL8ZkfZwAyDUNWi6OjtlJj.jpg" alt="John Tarkpor">
+          <blockquote>
+               “If you want to lay the best foundation possible <br> I'd recommend taking this course.<br> The depth the instructors go into is incredible.<br> I now feel so confident about starting up as a professional developer.”
+          </blockquote>
+          <h3>John Tarkpor</h3>
+          <span>Junior Frontend Developer</span>
+        </div>
+        <div class="slide">
+          <img src="https://static.vecteezy.com/system/resources/thumbnails/036/107/216/small/ai-generated-portrait-of-successful-and-happy-businesswoman-office-worker-smiling-and-looking-at-camera-with-crossed-arms-working-inside-modern-office-photo.jpg" alt="Tanya Sinchlari">
+          <blockquote>
+           "I've been interested in coding for a while <br>
+               but never taken the jump, until now.<br>
+              I couldn't recommend this course enough.<br>
+              I'm now in the job of my dreams<br>
+              and so excited about my future."
+          </blockquote>
+          <h3>Tanya Sinchlari</h3>
+          <span>UX Engineer</span>
+        </div>
+        <div class="slide">
+          <img src="https://media.istockphoto.com/id/1399565382/photo/young-happy-mixed-race-businessman-standing-with-his-arms-crossed-working-alone-in-an-office.jpg?s=612x612&w=0&k=20&c=buXwOYjA_tjt2O3-kcSKqkTp2lxKWJJ_Ttx2PhYe3VM=" alt="Karthik">
+          <blockquote>
+                "If you're dreaming of becoming a skilled frontend developer,<br> this course is the perfect starting point. <br>The instructors explain every concept—from basics to advanced topics—with such clarity, <br>it's almost impossible not to succeed.<br>I now have the confidence and hands-on skills to step into the tech industry with purpose.<br> It's been a game-changer for my career!"
+          </blockquote>
+          <h3>Karthik</h3>
+          <span>Frontend Developer</span>
+        </div>
+      </div>
+
+      <button class="nav prev"  onclick="prevSlide()">&#10094;</button>
+      <button class="nav next"  onclick="nextSlide()">&#10095;</button>
+    </div>
+  </main>
+
+  <script src="m.js"></script>
+</body>
+</html>
